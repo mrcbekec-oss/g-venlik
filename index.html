@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Babane Güvenlik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-one"></div>
+    <div class="bg-glow glow-two"></div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-icon">🛡️</div>
+          <div>
+            <p class="eyebrow">Güvenlik merkezi</p>
+            <h1>Güvenlik</h1>
+          </div>
+        </div>
+
+        <button id="refreshBtn" class="primary-btn" type="button">Yenile</button>
+      </header>
+
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="status-label">Mevcut durum</p>
+          <div id="statusBanner" class="status-banner safe">
+            <span class="dot"></span>
+            <span id="statusText">Güvenli</span>
+          </div>
+          <p id="commentText" class="comment-text">Pekâlâ görünüyorsun; sistemler huzurlu.</p>
+        </div>
+
+        <div class="score-panel">
+          <div class="score-ring">
+            <div class="score-ring-inner">
+              <strong id="scoreValue">92</strong>
+              <span>/ 100</span>
+            </div>
+          </div>
+          <div class="score-meta">
+            <p>Risk seviyesi</p>
+            <strong id="riskLevel">Düşük</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="check-grid" id="checkGrid" aria-live="polite"></section>
+
+      <section class="log-panel">
+        <div class="log-header">
+          <h2>Son kontrol</h2>
+          <span id="lastUpdated">Şimdi</span>
+        </div>
+        <ul id="activityList" class="activity-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
